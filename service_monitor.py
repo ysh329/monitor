@@ -26,12 +26,17 @@ def restart_service(service_name):
 
 def monitor_service(service_name, heartbeat_second, _INFO_LEVEL_={"INFO":"INFO", "WARN":"WARN", "ERRO":"ERRO"}):
     while True:
+        # check current status and output logs
         alive_status = check_service_alive(service_name)
         log_level = _INFO_LEVEL_["INFO"] if alive_status else _INFO_LEVEL_["ERRO"]
         current_time = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
         print("[{}][{}] service {} alive: {}".\
               format(log_level, current_time, service_name, alive_status))
+        
+        # time interval
         time.sleep(heartbeat_second)
+        
+        # restart service if dead
         if not alive_status:
             restart_service(service_name)
     return
