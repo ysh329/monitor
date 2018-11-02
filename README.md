@@ -2,8 +2,8 @@
 
 This is a little project used to monitor service status.
 
-1. Output current service status according according your defined time interval `heartbeat_second`;
-2. Restart if service dead.
+1. Output current service status of `service_name` according according your defined time interval `heartbeat_second`;
+2. Restart if service `service_name` dead.
 
 ## How to Use
 
