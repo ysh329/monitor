@@ -1,8 +1,8 @@
 # monitor
 
-This is a little project used to monitor service status.
+This little project can monitor service status.
 
-1. Output current service status of `service_name` according according your defined time interval `heartbeat_second`;
+1. Output current service status of `service_name` according your defined time interval `heartbeat_second`;
 2. Restart if service `service_name` dead.
 
 ## How to Use
@@ -20,7 +20,13 @@ if __name__ == "__main__":
 Use the following commands to run in the background:
 
 ```shell
+# method #1
 $ python service_monitor.py >> service_monitor.log &
+
+# method #2 if method #1 fail, you can:
+$ python service_monitor.py
+# type `ctrl+z`, then:
+$ bg
 ```
 
 **Caution: run as root user for privileged command.**
