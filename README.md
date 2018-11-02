@@ -27,6 +27,9 @@ $ python service_monitor.py >> service_monitor.log &
 $ python service_monitor.py
 # type `ctrl+z`, then:
 $ bg
+
+# method #3
+$ python service_monitor.py &
 ```
 
 **Caution: run as root user for privileged command.**
