@@ -23,7 +23,7 @@ Use the following commands to run in the background:
 # method #1
 $ python service_monitor.py >> service_monitor.log &
 
-# method #2 if method #1 fail, you can:
+# method #2
 $ python service_monitor.py
 # type `ctrl+z`, then:
 $ bg
